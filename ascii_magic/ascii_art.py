@@ -387,7 +387,7 @@ class AsciiArt:
                 art += '<span>'
 
                 for character in line:
-                    art += '<span>' + character.terminal_hex_color + '</span>'
+                    art += '<span>' + character.character + '</span>'
 
                 art += '</span>'
                 art += '<br />'

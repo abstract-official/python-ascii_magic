@@ -610,6 +610,13 @@ Output:
 
 With ```pytest``` installed, run it inside ```ascii_magic/tests/```.
 
+# Backwards compatibility checks (target: Python 3.6)
+
+```bash
+pip install vermin
+vermin -vvv -t=3.6 --backport typing --violations --eval-annotations .
+```
+
 # Licence
 
 Copyright (c) 2020 Leandro Barone.

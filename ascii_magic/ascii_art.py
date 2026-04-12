@@ -556,6 +556,7 @@ class AsciiArt:
         auto_open: bool = False,
     ) -> None:
         html = f"""<!DOCTYPE html>
+    <html>
     <head>
         <title>ASCII art</title>
         <meta name="generator" content="ASCII Magic {AsciiArt.__VERSION__} - https://github.com/LeandroBarone/python-ascii_magic/" />

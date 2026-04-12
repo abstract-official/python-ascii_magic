@@ -10,12 +10,13 @@ Code based on [ProfOak's Ascii Py](https://github.com/ProfOak/Ascii_py/).
 - Code refactoring; no functional changes
 - Code is now compatible with Python 3.6+; turns out type hints were the only blocker, so forward references were used instead
 - Switched to `build` instead of `distutils` for package building
-- Fixed [missing HTML opening tag](https://github.com/LeandroBarone/python-ascii_magic/pull/33)
+- [Fix: missing HTML opening tag](https://github.com/LeandroBarone/python-ascii_magic/pull/33)
+- [Fix: typo in unit test](https://github.com/LeandroBarone/python-ascii_magic/pull/32)
 
 ### v2.7.4 - Jan 2026: Housekeeping
 - Stricter type checking
 - Updated default Gemini model to 'gemini-2.5-flash-image'
-- Fixed Python 3.9 [compatibility issue](https://github.com/LeandroBarone/python-ascii_magic/pull/28)
+- [Fix: Python 3.9 compatibility](https://github.com/LeandroBarone/python-ascii_magic/pull/28)
 
 ### v2.7 - Oct 2025
 - SwarmUI support: from_swarmui()
@@ -43,6 +44,7 @@ Code based on [ProfOak's Ascii Py](https://github.com/ProfOak/Ascii_py/).
 
 ### v2.1 - Feb 2023
 - DALL-E support: from_dalle()
+- [Optimization for HTML generation](https://github.com/LeandroBarone/python-ascii_magic/pull/14)
 
 ### v2.0 - Feb 2023
 - Complete rewrite, full OOP, no longer compatible with 1.x
@@ -52,6 +54,7 @@ Code based on [ProfOak's Ascii Py](https://github.com/ProfOak/Ascii_py/).
 ### v1.6 - Sep 2021
 - OOP functionality
 - to_file()
+- [Support for transparent PNGs](https://github.com/LeandroBarone/python-ascii_magic/pull/1)
 
 ### v1.5 - Nov 2020
 - First public release

@@ -6,7 +6,13 @@ Code based on [ProfOak's Ascii Py](https://github.com/ProfOak/Ascii_py/).
 
 # Changelog
 
-### v2.7.4 - Jan 2026
+### v2.7.5 - Apr 2026: Housekeeping
+- Code refactoring; no functional changes
+- Code is now compatible with Python 3.6+; turns out type hints were the only blocker, so forward references were used instead
+- Switched to `build` instead of `distutils` for package building
+- Fixed [missing HTML opening tag](https://github.com/LeandroBarone/python-ascii_magic/pull/33)
+
+### v2.7.4 - Jan 2026: Housekeeping
 - Stricter type checking
 - Updated default Gemini model to 'gemini-2.5-flash-image'
 - Fixed Python 3.9 [compatibility issue](https://github.com/LeandroBarone/python-ascii_magic/pull/28)

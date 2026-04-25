@@ -28,7 +28,7 @@ include = ["ascii_magic*"]
 
 [tool.setuptools.package-data]
 "ascii_magic" = [
-    "fonts/courier_prime.ttf",
+    "py.typed",
     "tests/lion.jpg",
     "tests/chicken_transparent.png",
 ]

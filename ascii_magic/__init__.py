@@ -1,15 +1,6 @@
 from ascii_magic.ascii_art import AsciiArt
 from ascii_magic.color_data import ColorData
-from ascii_magic.constants import Front, Back, CHARS_BY_DENSITY, DEFAULT_GEMINI_MODEL
-from ascii_magic.functions import (
-    quick_test,
-    from_image,
-    from_pillow_image,
-    from_url,
-    from_clipboard,
-    from_gemini,
-    from_swarmui,
-)
+from ascii_magic.constants import Front, Back, ColorMode, CHARS_BY_DENSITY
 
 __all__ = [
     # Main classes
@@ -17,15 +8,7 @@ __all__ = [
     "ColorData",
     "Front",
     "Back",
-    # Functions
-    "quick_test",
-    "from_image",
-    "from_pillow_image",
-    "from_url",
-    "from_clipboard",
-    "from_gemini",
-    "from_swarmui",
+    "ColorMode",
     # Extra stuff
     "CHARS_BY_DENSITY",
-    "DEFAULT_GEMINI_MODEL",
 ]

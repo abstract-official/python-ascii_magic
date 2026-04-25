@@ -45,15 +45,10 @@ class Back(Enum):
     LIGHTWHITE = 107
 
 
-class Modes(Enum):
-    ASCII = 'ASCII'
-    TERMINAL = 'TERMINAL'
-    OBJECT = 'OBJECT'
-
-    HTML = 'HTML'
-    HTML_MONOCHROME = 'HTML_MONOCHROME'
-    HTML_TERMINAL = 'HTML_TERMINAL'
-    HTML_FULL_COLOR = 'HTML_FULL_COLOR'
+class ColorMode(Enum):
+    MONOCHROME = 0
+    ANSI_16_COLOR = 1
+    FULL_COLOR = 2
 
 
 PALETTE = [
@@ -68,10 +63,6 @@ PALETTE = [
 ]
 
 CHARS_BY_DENSITY = ' .`-_\':,;^=+/"|)\\<>)iv%xclrs{*}I?!][1taeo7zjLunT#JCwfy325Fp6mqSghVd4EgXPGZbYkOA&8U$@KHDBWNMR0QQ'
-
-DEFAULT_STYLES = 'display: inline-block; border-width: 4px 6px; border-color: black; color: white; border-style: solid; background-color:black; font-size: 8px;'
-
-DEFAULT_GEMINI_MODEL = 'gemini-2.5-flash-image'
 
 # Image.Resampling.LANCZOS was added in Pillow 10 replacing Image.LANCZOS
 RESAMPLING_METHOD = (

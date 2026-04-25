@@ -39,10 +39,12 @@ class AsciiArt:
         color_mode: ColorMode = ColorMode.ANSI_16_COLOR,
         back: "t.Optional[Back]" = None,
         front: "t.Optional[Front]" = None,
+        inverse: bool = False,
     ):
         lines = self._img_to_art(
             columns=columns,
             width_ratio=width_ratio,
+            inverse=inverse,
         )
 
         return '\n'.join(
@@ -58,6 +60,7 @@ class AsciiArt:
         self,
         columns: int = 120,
         width_ratio: float = 2.2,
+        inverse: bool = False,
     ) -> list[list[ColorData]]:
         img_w, img_h = self._image.size
         scalar = img_w * width_ratio / columns
@@ -74,6 +77,8 @@ class AsciiArt:
             for w in range(new_w):
                 # get brightness value
                 brightness = self.get_brightness_value(grayscale_img, w, h)
+                if inverse:
+                    brightness = 1 - brightness
                 pixel = rgb_img.getpixel((w, h))
 
                 # getpixel() may return an int, instead of tuple of ints, if the source img is a PNG with a transparency layer

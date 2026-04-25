@@ -12,8 +12,6 @@ from ascii_magic.constants import (
 
 from PIL import Image
 
-import typing as t
-
 
 class AsciiArt:
     __VERSION__ = __version__
@@ -37,8 +35,8 @@ class AsciiArt:
         width_ratio: float = 2.2,
         chars: str = CHARS_BY_DENSITY,
         color_mode: ColorMode = ColorMode.ANSI_16_COLOR,
-        back: "t.Optional[Back]" = None,
-        front: "t.Optional[Front]" = None,
+        back: Back | None = None,
+        front: Front | None = None,
         inverse: bool = False,
     ):
         lines = self._img_to_art(
@@ -113,8 +111,8 @@ class AsciiArt:
 
     @staticmethod
     def calculate_color_distance(
-        v1: "t.Union[t.List[float], t.Tuple[float, float, float]]",
-        v2: "t.Union[t.List[float], t.Tuple[float, float, float]]"
+        v1: list[float] | tuple[float, float, float],
+        v2: list[float] | tuple[float, float, float],
     ) -> float:
         return 0.299 * (v1[0] - v2[0])**2 + 0.587 * (v1[1] - v2[1])**2 + 0.114 * (v1[2] - v2[2])**2
 
